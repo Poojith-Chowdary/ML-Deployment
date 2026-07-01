@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ml-churn-api
+    runtime: docker
+    plan: free
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_PATH
+        value: models/model.joblib
+      - key: PYTHONPATH
+        value: /app
