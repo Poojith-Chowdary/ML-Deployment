@@ -2,11 +2,11 @@
 
 > End-to-end ML deployment: scikit-learn model served via FastAPI, containerised with Docker, experiment-tracked with MLflow, tested with pytest, and auto-deployed to Render via GitHub Actions.
 
-[![CI](https://github.com/YOUR_USERNAME/ml-deployment/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/ml-deployment/actions/workflows/ci.yml)
+[![CI](https://github.com/Poojith-Chowdary/ml-deployment/actions/workflows/ci.yml/badge.svg)](https://github.com/Poojith-Chowdary/ml-deployment/actions/workflows/ci.yml)
 [![Docker](https://img.shields.io/badge/docker-ready-blue?logo=docker)](./Dockerfile)
 [![Python](https://img.shields.io/badge/python-3.11-blue?logo=python)](./requirements.txt)
 
-**Live endpoint:** `https://YOUR_APP.onrender.com/docs`
+**Live endpoint:** `https://ml-churn-api-8zd5.onrender.com`
 
 ---
 
@@ -50,7 +50,7 @@ MLflow tracking        api/main.py (FastAPI)
 ## Quick start (local)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ml-deployment.git
+git clone https://github.com/Poojith-Chowdary/ml-deployment.git
 cd ml-deployment
 pip install -r requirements.txt
 
