@@ -1,8 +1,8 @@
 import pandas as pd
 from fastapi import APIRouter, HTTPException, Request
 
-from api.schemas import PredictRequest, PredictResponse, HealthResponse, ModelInfoResponse
-from src.config import NUMERIC_FEATURES, CATEGORICAL_FEATURES, ALL_FEATURES, MODEL_VERSION
+from api.schemas import HealthResponse, ModelInfoResponse, PredictRequest, PredictResponse
+from src.config import ALL_FEATURES, CATEGORICAL_FEATURES, MODEL_VERSION, NUMERIC_FEATURES
 
 router = APIRouter()
 

@@ -1,17 +1,23 @@
 # --- path bootstrap ---
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 # ----------------------
 
 import pandas as pd
-from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 from src.config import (
-    DATA_RAW, TARGET_COL, TARGET_MAP,
-    DROP_COLS, NUMERIC_FEATURES, CATEGORICAL_FEATURES, ALL_FEATURES,
+    ALL_FEATURES,
+    CATEGORICAL_FEATURES,
+    DATA_RAW,
+    DROP_COLS,
+    NUMERIC_FEATURES,
+    TARGET_COL,
+    TARGET_MAP,
 )
 
 

@@ -1,6 +1,7 @@
 # --- path bootstrap (makes `python -m src.train` work from any shell) ---
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 # -------------------------------------------------------------------------
 
@@ -8,12 +9,12 @@ import joblib
 import mlflow
 import mlflow.sklearn
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.pipeline import Pipeline
+from sklearn.metrics import accuracy_score, classification_report, f1_score, roc_auc_score
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score, roc_auc_score, accuracy_score, classification_report
+from sklearn.pipeline import Pipeline
 
-from src.config import MODEL_PATH, MLFLOW_TRACKING_URI, MODEL_VERSION
-from src.preprocess import load_raw_data, clean, build_preprocessor
+from src.config import MLFLOW_TRACKING_URI, MODEL_PATH, MODEL_VERSION
+from src.preprocess import build_preprocessor, clean, load_raw_data
 
 
 def tune_threshold(y_true, y_prob):

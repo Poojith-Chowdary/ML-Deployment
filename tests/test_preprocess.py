@@ -1,12 +1,13 @@
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import pandas as pd
 import numpy as np
 import pytest
-from src.preprocess import load_raw_data, clean, build_preprocessor
-from src.config import ALL_FEATURES, NUMERIC_FEATURES, CATEGORICAL_FEATURES
+
+from src.config import ALL_FEATURES, NUMERIC_FEATURES
+from src.preprocess import build_preprocessor, clean, load_raw_data
 
 
 @pytest.fixture(scope="module")

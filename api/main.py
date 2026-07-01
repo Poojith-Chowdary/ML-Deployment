@@ -1,8 +1,8 @@
-import joblib
 import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+import joblib
 from fastapi import FastAPI
 
 from src.config import MODEL_PATH, MODEL_VERSION
@@ -30,5 +30,6 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-from api.routes.predict import router
+from api.routes.predict import router  # noqa: E402
+
 app.include_router(router)
